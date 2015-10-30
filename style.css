@@ -1,0 +1,40 @@
+/* Theme Name: capellaHomes
+Author:
+Author URI:
+Version: 1.0
+License:GNU General Public License
+License URI:https://www.gnu.org/licenses/gpl.html
+Tags:black, blue, white, light, one-column, fluid-layout, responsive-layout, custom-menu, featured-images, microformats, sticky-post, threaded-comments
+Text Domain:conure
+NinJawP is distributed under the terms of the GNU GPL */
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+body{line-height:1}
+ol,ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}
+table{border-collapse:collapse;border-spacing:0}
+/*body{font-family:ralewaymedium}
+h1{font-size:2em}
+h2{font-size:1.5em}
+h3{font-size:1.25em}
+a{text-decoration:none;color:#fff}
+p{color:#000;line-height:1.375;margin-bottom:20px}
+.container{max-width:1180px;margin:0 auto}*/
+
+/*New Color #892212*/
+
+/*Custom Styles*/
+.navbar-default {background:url(/wp-content/themes/capellaHomes/assets/images/main_bg.gif) !important;}
+.site-btn {background-image: none !important;color: #fff !important;}
+.top-bar {color:#fff;}
+.top-bar .map {color:#fff !important;}
+.home-gallery ul.gallery li figure img {height:210px;}
+.home-gallery ul.gallery {min-height:424px;}
+button[type="button"] {background-image:none !important;}
+.footer-bar {color:#fff;}
+.footer-bar ul li a {color:#fff;}
+.top-bar .language {color:#fff !important;}
+.home-gallery ul.filter li a:focus {color:#fff !important;}
+footer .sub-footer .themezinho a{color:#fff;}
+footer {background:url(/wp-content/themes/capellaHomes/assets/images/main_bg.gif) !important;}
