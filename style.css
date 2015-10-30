@@ -47,6 +47,16 @@ button[type="button"] {background-image:none !important;}
 
 .about-us {padding:60px 0px !important;}
 
+.menu-services-container{ width:100%; background:#892212; padding:25px 15px;}
+.menu-services-container ul{ width:100%; }
+.menu-services-container ul li{ width:100%; border-bottom:1px solid rgba(0,0,0,0.1);}
+.menu-services-container ul li:last-child{ border-bottom:none; padding-bottom:0;}
+.menu-services-container ul li a{ width:100%; text-indent:10px; font-size:15px; font-weight:700; margin:0; padding:15px 0; color: #fff;display:block;}
+.menu-services-container ul li a:hover{ background:rgba(0,0,0,0.1); color:#fff;}
+.menu-services-container ul li.active a{ background:rgba(0,0,0,0.1); color:#fff;}
+
+.sidebar-widget-container {margin-bottom:40px;}
+
 .footer-bar {color:#fff;}
 .footer-bar ul li a {color:#fff;}
 footer .sub-footer .themezinho a{color:#fff;margin-left: 10px;}

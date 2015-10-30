@@ -44,7 +44,7 @@
       <div class="inner-header gradient">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle toggle-menu menu-left push-body" data-toggle="collapse" data-target="#nav"> <i class="ion ion-navicon"></i> </button>
-          <a class="navbar-brand transition" href="index.html"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Image"></a>
+          <a class="navbar-brand transition" href="<?php echo site_url() ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Image"></a>
       	</div>
         <div class="collapse navbar-collapse cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="nav">
           <ul class="nav navbar-nav">

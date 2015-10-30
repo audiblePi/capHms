@@ -48,15 +48,15 @@
         <div class="carousel">
           <div class="item">
             <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/images/homes.png" alt="Image"> </figure>
-            <span class="description">Develop and recreate as well as the ones we provide</span> <a href="#">HOMES & COMMUNITIES</a> <span class="border"></span> 
+            <span class="description">Develop and recreate as well as the ones we provide</span> <a href="/homes-communities">HOMES & COMMUNITIES</a> <span class="border"></span> 
           </div>
           <div class="item">
             <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/images/renovations.png" alt="Image"> </figure>
-            <span class="description">Develop and recreate as well as the ones we provide</span> <a href="#">RENOVATION</a> <span class="border"></span> 
+            <span class="description">Develop and recreate as well as the ones we provide</span> <a href="/renovation-remodeling">RENOVATION</a> <span class="border"></span> 
           </div>
           <div class="item">
             <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/images/additions.png" alt="Image"> </figure>
-            <span class="description">Develop and recreate as well as the ones we provide</span> <a href="#">ROOM ADDITIONS</a> <span class="border"></span> 
+            <span class="description">Develop and recreate as well as the ones we provide</span> <a href="/room-additions">ROOM ADDITIONS</a> <span class="border"></span> 
           </div>
         </div>
       </div>
