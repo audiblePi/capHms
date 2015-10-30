@@ -1,4 +1,4 @@
-/* Theme Name: capellaHomes
+/* Theme Name: cappellaHomes
 Author:
 Author URI:
 Version: 1.0
@@ -25,16 +25,34 @@ p{color:#000;line-height:1.375;margin-bottom:20px}
 /*New Color #892212*/
 
 /*Custom Styles*/
-.navbar-default {background:url(/wp-content/themes/capellaHomes/assets/images/main_bg.gif) !important;}
 .site-btn {background-image: none !important;color: #fff !important;}
+button[type="button"] {background-image:none !important;}
+
+.map-container .close-btn i {color:#fff;}
+.top-bar .language {color:#fff !important;}
+.navbar-default {background:url(/wp-content/themes/cappellaHomes/assets/images/main_bg.gif) !important;}
 .top-bar {color:#fff;}
-.top-bar .map {color:#fff !important;}
+.top-bar .phone {float:right; margin-left: 8% !important;}
+.top-bar .map {color:#fff !important;float:right;}
+.navbar-nav>li>.dropdown-menu>li>a {color:#fff !important;}
+.navbar-default .navbar-toggle i {color:#fff;}
+
+.intro .title-box {margin-top: 0px !important;}
+
 .home-gallery ul.gallery li figure img {height:210px;}
 .home-gallery ul.gallery {min-height:424px;}
-button[type="button"] {background-image:none !important;}
+.home-gallery ul.filter li a {display:block; margin-bottom:5px;}
+.home-gallery ul.filter li a:hover{color:#fff !important;}
+.home-gallery ul.filter li a:focus {color:#fff !important;}
+
+.about-us {padding:60px 0px !important;}
+
 .footer-bar {color:#fff;}
 .footer-bar ul li a {color:#fff;}
-.top-bar .language {color:#fff !important;}
-.home-gallery ul.filter li a:focus {color:#fff !important;}
-footer .sub-footer .themezinho a{color:#fff;}
-footer {background:url(/wp-content/themes/capellaHomes/assets/images/main_bg.gif) !important;}
+footer .sub-footer .themezinho a{color:#fff;margin-left: 10px;}
+footer {background:url(/wp-content/themes/cappellaHomes/assets/images/main_bg.gif) !important;}
+
+span.wpcf7-form-control-wrap {display:block;}
+.wpcf7-text, .wpcf7-textarea {width:100% !important;}
+span.wpcf7-list-item {display:block; margin-left:1.5em !important;}
+.wpcf7-form-control.wpcf7-submit{float: left; height: 36px; padding: 0 15px; border: none; font-weight: 700; background: #892212;color:#fff;}

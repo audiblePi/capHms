@@ -84,28 +84,27 @@
 		var $container = $('.home-gallery ul.gallery');
 		$container.isotope({
 			filter: '.baroody',
-			layoutMode: 'fitRows'
-			// animationOptions: {
-			// 	duration: 750,
-			// 	//easing: 'linear',
-			// 	//queue: false
-			// }
+			//layoutMode: 'fitRows'
+			animationOptions: {
+				duration: 750,
+				easing: 'linear',
+				queue: false
+			}
 		});
 
 		$('.filter li a').click(function(){
-			console.log('123');
 			// $('.filter li a .current').removeClass('current');
 			// $(this).addClass('current');
 		 
 			var selector = $(this).attr('data-filter');
 			$container.isotope({
 				filter: selector,
-				layoutMode: 'fitRows'
-				// animationOptions: {
-				// 	duration: 750,
-				// 	//easing: 'linear',
-				// 	//queue: false
-				// }
+				//layoutMode: 'fitRows'
+				animationOptions: {
+					duration: 750,
+					easing: 'linear',
+					queue: false
+				}
 			});
 			return false;
 		}); 

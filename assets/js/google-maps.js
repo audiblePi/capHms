@@ -1,10 +1,10 @@
 // Google maps pin tooltip	
 	var markers = [
     	{
-       		"lat": '30.129947',
-           "lng": '-81.773846',
+       		"lat": '30.129792',
+           "lng": '-81.773839',
 		  
-			"description": 'CHOLA DIGITAL <br/><a href="http://www.acrocapoeira.com/chola" style="color:#ef3c3c; font-weight:800;">Get it now</a>'
+			"description": '<a href="http://www.cappellahomes.com" style="color:#ef3c3c; font-weight:800;">Cappella Homes, Inc.</a>'
         }
 	];
 	
@@ -13,7 +13,7 @@
 	window.onload = function () {
 		var mapOptions = {
 			center: new google.maps.LatLng(markers[0].lat, markers[0].lng),
-        	zoom: 16,
+        	zoom: 10,
 			flat: true,
 			scrollwheel:false,
 			panControl:false,
@@ -33,7 +33,7 @@
 			var marker = new google.maps.Marker({
            	position: myLatlng,
            	map: map,
-        	icon: '/wp-content/themes/boilerPlate/assets/images/map-pin.png',
+        	icon: '/wp-content/themes/cappellaHomes/assets/images/map-pin.png',
            	title: data.title
            	});
 			(function (marker, data) {

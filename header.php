@@ -35,8 +35,8 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
-            <h5>Building spectacular structures</h5>
-            <span class="phone"><i class="ion-android-call"></i> 1-904-276-1145</span> <a href="#" class="map"><i class="ion-ios-location"></i> SEE ON MAPS</a> <a href="#" class="language"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/flag-en.jpg" alt="Image"> ENGLISH</a> </div>
+            <h5>Making Your Dream Home A Reality</h5>
+            <span class="phone"><i class="ion-android-call"></i> 1-904-276-1145</span> <a href="#" class="map"><i class="ion-ios-location"></i> SEE ON MAPS</a> <!-- <a href="#" class="language"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/flag-en.jpg" alt="Image"> ENGLISH</a>  --></div>
         </div>
       </div>
     </div>
@@ -49,6 +49,13 @@
         <div class="collapse navbar-collapse cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="nav">
           <ul class="nav navbar-nav">
             <li><a href="<?php echo site_url() ?>" class="transition">HOME</a><span></span></li>
+            <li class="dropdown"> <a href="#">SERVICES</a><span></span>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="/services/homes-communities" class="transition">Homes & Communities</a></li>
+                <li><a href="/services/renovation-remodeling" class="transition">Renovation & Remodeling</a></li>
+                <li><a href="/services/room-additions" class="transition">Room Additions</a></li>
+              </ul>
+            </li>
             <li><a href="/about" class="transition">ABOUT</a><span></span></li>
             <li><a href="/contact" class="transition">CONTACT</a><span></span></li>
             <li><a href="/subcontractors-and-vendors" class="transition">SUBCONTRACTORS & VENDORS</a><span></span></li>

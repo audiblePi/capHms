@@ -15,8 +15,10 @@
           <h5>Develops quality projects to cater for workplace and office</h5>
           <h2>GET OFFER</h2>
           <span></span> </div>
-        <p>Our customers, employees and subcontractors are the reasons for our existence. We will take all necessary precautions in order to render our work environments more secure and healthy and we will prioritize maintenance of such precautions. We will abide by the legal legislations and work safety regulations in effect at our country and in other countries where we are active.</p>
-        <div class="file-box"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-file.png" alt="Image"> <a href="#">DOWNLOAD PDF CATALOG</a> <a href="#">SEE COLOR SCHEME</a> </div>
+          <p>Cappella Homes is a professional residential builder specializing in custom built homes. Whether your dream is to make the home you live in live up to its full potential with our remodeling services, or if you desire to design and build a new, custom home, we are here to help.</p>
+          <p>We approach each project as an opportunity to give you the best possible home building experience. Whether you have house plans in hand, are interested in our design/build program or choose to select from our extensive portfolio of new home plans, we submit accurate proposals for each job without throwing around per-square-foot pricing.</p>
+          <p>At Cappella Homes, we are always glad to guide our clients through every step of the building or room remodeling process. Our ultimate goal is to make your building experience a pleasant and memorable one that matches the quality of the custom homes we build for you. We strive to have customers say Cappella Homes is among the best Jacksonville home builders.</p>
+        <div class="file-box"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-file.png" alt="Image"> <a href="#">DOWNLOAD PDF CATALOG</a> <!-- <a href="#">SEE COLOR SCHEME</a> --> </div>
       </div>
     </div>
   </div>
@@ -28,7 +30,7 @@
       <div class="col-xs-12">
         <h4>We contribute to the society with the ones we protect</h4>
         <h3>Develop and recreate as well as the ones we provide for our customers</h3>
-        <a href="#" class="site-btn">GET A QUOTE <i class="ion-chevron-right"></i></a> </div>
+        <a href="/contact" class="site-btn">GET A QUOTE <i class="ion-chevron-right"></i></a> </div>
     </div>
   </div>
 </section>

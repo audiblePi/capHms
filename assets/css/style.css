@@ -215,7 +215,7 @@ a{-moz-transition: all 0.3s ease; -o-transition: all 0.3s ease; -ms-transition: 
 
 
 /* FORM ELEMENTS */
-input[type="text"]{ width:220px; height:36px; border:1px solid #eee; padding:0 10px; font-weight:500; color:#2f2e33;}
+input[type="text"], input[type="email"]{ width:220px; height:36px; border:1px solid #eee; padding:0 10px; font-weight:500; color:#2f2e33;}
 button[type="submit"]{ float:left; height:36px; padding:0 15px; border:none; font-weight:700; background:url(../images/button-bg.jpg) repeat-x #892212; }
 button[type="button"]{ float:left; height:36px; padding:0 15px; border:none; font-weight:700; background:url(../images/button-bg.jpg) repeat-x #892212; }
 textarea{width:320px; height:100px; border:1px solid #eee; padding:10px; font-weight:500; color:#2f2e33;}
@@ -392,7 +392,7 @@ header { width:100%; float:left;}
 
 /* HOME GALLERY */
 .home-gallery{width:100%; float:left; border-top:1px solid #eee; padding-top:80px;}
-.home-gallery *{-moz-transition: all 0.3s ease; -o-transition: all 0.3s ease; -ms-transition: all 0.3s ease; transition: all 0.3s ease;}
+.home-gallery *{/*-moz-transition: all 0.3s ease; -o-transition: all 0.3s ease; -ms-transition: all 0.3s ease; transition: all 0.3s ease;*/}
 .home-gallery ul.filter{ width:100%; float:left; margin-bottom:40px;}
 .home-gallery ul.filter li{ display:inline-block; margin:0 4px;}
 .home-gallery ul.filter li a{color:#fff; background:#828285; padding:5px 12px; border-radius:2px; font-size:13px; font-weight:700;}

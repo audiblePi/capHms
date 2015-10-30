@@ -1,8 +1,8 @@
 <section class="footer-bar wow fadeIn">
   <div class="container">
     <div class="row">
-      <div class="col-md-8 col-xs-12"> <i class="ion-clock icon"></i>
-        <h4>Monday to Saturday: 9:00 - 18:00 // Sunday: Closed</h4>
+      <div class="col-md-8 col-xs-12">
+        <h4>Making Your Dream Home A Reality.</h4>
       </div>
       <div class="col-md-4 col-xs-12">
         <h4>Follow us on social media</h4>
