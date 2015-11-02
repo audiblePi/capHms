@@ -10,21 +10,21 @@ $main_tab = array(
                                         'title' => __( 'Header Options' ),
                                         'description' => __( 'Set Options for Header used throughout site.')
                                         ),
-                      'home_page_slider' => array(
-                                                  'name' => 'home_page_slider',
-                                                  'title' => __( 'Home Page Slider Options' ),
-                                                  'description' => __( 'Set Options for Slider.')
-                                                  ),
-                      'home_page_callouts' => array(
-                                                    'name' => 'home_page_callouts',
-                                                    'title' => __( 'Home Page Callout Options' ),
-                                                    'description' => __( 'Set Options for homepage callouts.')
-                                                    ),
-                      'home_page_standards' => array(
-                                                     'name' => 'home_page_standards',
-                                                     'title' => __( 'Home Page Additional Services' ),
-                                                     'description' => __( 'Set services to be displayed on "Why Choose AASI".')
-                                                     ),
+                      // 'home_page_slider' => array(
+                      //                             'name' => 'home_page_slider',
+                      //                             'title' => __( 'Home Page Slider Options' ),
+                      //                             'description' => __( 'Set Options for Slider.')
+                      //                             ),
+                      // 'home_page_callouts' => array(
+                      //                               'name' => 'home_page_callouts',
+                      //                               'title' => __( 'Home Page Callout Options' ),
+                      //                               'description' => __( 'Set Options for homepage callouts.')
+                      //                               ),
+                      // 'home_page_standards' => array(
+                      //                                'name' => 'home_page_standards',
+                      //                                'title' => __( 'Home Page Additional Services' ),
+                      //                                'description' => __( 'Set services to be displayed on "Why Choose AASI".')
+                      //                                ),
                       'business_information' => array(
                                                       'name' => 'business_information',
                                                       'title' => __( 'Business Information' ),

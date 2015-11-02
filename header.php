@@ -36,7 +36,7 @@
         <div class="row">
           <div class="col-xs-12">
             <h5>Making Your Dream Home A Reality</h5>
-            <span class="phone"><i class="ion-android-call"></i> 1-904-276-1145</span> <a href="#" class="map"><i class="ion-ios-location"></i> SEE ON MAPS</a> <!-- <a href="#" class="language"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/flag-en.jpg" alt="Image"> ENGLISH</a>  --></div>
+            <span class="phone"><i class="ion-android-call"></i> 1-904-276-1145</span> <a href="#" class="map"><i class="ion-ios-location"></i> SEE ON MAPS</a></div>
         </div>
       </div>
     </div>
@@ -44,7 +44,7 @@
       <div class="inner-header gradient">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle toggle-menu menu-left push-body" data-toggle="collapse" data-target="#nav"> <i class="ion ion-navicon"></i> </button>
-          <a class="navbar-brand transition" href="<?php echo site_url() ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Image"></a>
+          <a class="navbar-brand transition" href="<?php echo site_url() ?>"><img src="<?php echo custom_logo(); ?>" alt="Image"></a>
       	</div>
         <div class="collapse navbar-collapse cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="nav">
           <ul class="nav navbar-nav">
@@ -61,9 +61,7 @@
             <li><a href="/subcontractors-and-vendors" class="transition">SUBCONTRACTORS & VENDORS</a><span></span></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><i class="ion-social-facebook"></i></a></li>
-            <li><a href="#"><i class="ion-social-twitter"></i></a></li>
-            <li><a href="#"><i class="ion-social-google plus"></i></a></li>
+            <?php get_social_icons(); ?>
           </ul>
         </div>
       </div>

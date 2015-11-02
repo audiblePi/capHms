@@ -17,8 +17,8 @@
           <span></span> </div>
           <p>Cappella Homes is a professional residential builder specializing in custom built homes. Whether your dream is to make the home you live in live up to its full potential with our remodeling services, or if you desire to design and build a new, custom home, we are here to help.</p>
           <p>We approach each project as an opportunity to give you the best possible home building experience. Whether you have house plans in hand, are interested in our design/build program or choose to select from our extensive portfolio of new home plans, we submit accurate proposals for each job without throwing around per-square-foot pricing.</p>
-          <p>At Cappella Homes, we are always glad to guide our clients through every step of the building or room remodeling process. Our ultimate goal is to make your building experience a pleasant and memorable one that matches the quality of the custom homes we build for you. We strive to have customers say Cappella Homes is among the best Jacksonville home builders.</p>
-        <div class="file-box"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-file.png" alt="Image"> <a href="#">DOWNLOAD PDF CATALOG</a> <!-- <a href="#">SEE COLOR SCHEME</a> --> </div>
+         <!--  <p>At Cappella Homes, we are always glad to guide our clients through every step of the building or room remodeling process. Our ultimate goal is to make your building experience a pleasant and memorable one that matches the quality of the custom homes we build for you. We strive to have customers say Cappella Homes is among the best Jacksonville home builders.</p> -->
+        <div class="file-box"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-file.png" alt="Image"> <a href="#">DOWNLOAD PDF CATALOG</a></div>
       </div>
     </div>
   </div>

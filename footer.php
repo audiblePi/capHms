@@ -7,9 +7,7 @@
       <div class="col-md-4 col-xs-12">
         <h4>Follow us on social media</h4>
         <ul class="social-media">
-          <li><a href="#"><i class="ion-social-facebook"></i></a></li>
-          <li><a href="#"><i class="ion-social-twitter"></i></a></li>
-          <li><a href="#"><i class="ion-social-google plus"></i></a></li>
+          <?php get_social_icons(); ?>
         </ul>
       </div>
     </div>
