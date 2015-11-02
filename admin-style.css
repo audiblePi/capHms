@@ -1,0 +1,15 @@
+.appearance_page_upfw-settings {  }
+.appearance_page_upfw-settings .form-table { display: none; }
+.appearance_page_upfw-settings h3 { cursor: pointer; }
+
+.appearance_page_upfw-settings .form-table.visible { display: block; }
+
+.toggle-button { display: inline-block; -webkit-transform: rotate(0deg); transition: all .5s; }
+.toggle-button.visible { -webkit-transform: rotate(90deg); }
+
+li.inactive { color: #f1f1f1; }
+
+.inactive a { color: #0074a2 }
+.inactive a:hover { color: #2ea2cc; }
+
+.mustuse { display: none !important; }

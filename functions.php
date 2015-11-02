@@ -149,3 +149,14 @@ function google_map_css() {
 	}</style>';
 }
 add_action( 'wp_head', 'google_map_css' );
+
+// ADMIN SCRIPTS AND FUNCTIONS ////////////
+add_action( 'admin_enqueue_scripts', 'admin_scripts_styles' );
+function admin_scripts_styles(){
+	wp_register_style( 'custom_wp_admin_css', get_template_directory_uri() . '/admin-style.css', false, '1.0.0' );
+	wp_enqueue_style( 'custom_wp_admin_css' );
+
+	wp_register_script( 'custom_wp_admin_js', get_template_directory_uri() . '/admin-script.js', false, '1.0.0' );
+	wp_enqueue_script( 'custom_wp_admin_js' );
+
+}

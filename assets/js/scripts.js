@@ -84,12 +84,12 @@
 		var $container = $('.home-gallery ul.gallery');
 		$container.isotope({
 			filter: '.baroody',
-			//layoutMode: 'fitRows'
-			animationOptions: {
-				duration: 750,
-				easing: 'linear',
-				queue: false
-			}
+			layoutMode: 'fitRows'
+			// animationOptions: {
+			// 	duration: 750,
+			// 	// easing: 'linear',
+			// 	//queue: false
+			// }
 		});
 
 		$('.filter li a').click(function(){
@@ -99,12 +99,12 @@
 			var selector = $(this).attr('data-filter');
 			$container.isotope({
 				filter: selector,
-				//layoutMode: 'fitRows'
-				animationOptions: {
-					duration: 750,
-					easing: 'linear',
-					queue: false
-				}
+				layoutMode: 'fitRows'
+				// animationOptions: {
+				// 	duration: 750,
+				// 	//easing: 'linear',
+				// 	//queue: false
+				// }
 			});
 			return false;
 		}); 

@@ -56,10 +56,12 @@ button[type="button"] {background-image:none !important;}
 .menu-services-container ul li.active a{ background:rgba(0,0,0,0.1); color:#fff;}
 
 .sidebar-widget-container {margin-bottom:40px;}
+.sidebar-widget-container .site-btn{width:100%; border-bottom:none;}
 
 .footer-bar {color:#fff;}
 .footer-bar ul li a {color:#fff;}
 footer .sub-footer .themezinho a{color:#fff;margin-left: 10px;}
+footer .sub-footer .themezinho a:hover{color:#892212;}
 footer {background:url(/wp-content/themes/cappellaHomes/assets/images/main_bg.gif) !important;}
 
 span.wpcf7-form-control-wrap {display:block;}
