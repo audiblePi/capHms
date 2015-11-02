@@ -10,21 +10,31 @@ $main_tab = array(
                                         'title' => __( 'Header Options' ),
                                         'description' => __( 'Set Options for Header used throughout site.')
                                         ),
-                      // 'home_page_slider' => array(
-                      //                             'name' => 'home_page_slider',
-                      //                             'title' => __( 'Home Page Slider Options' ),
-                      //                             'description' => __( 'Set Options for Slider.')
-                      //                             ),
-                      // 'home_page_callouts' => array(
-                      //                               'name' => 'home_page_callouts',
-                      //                               'title' => __( 'Home Page Callout Options' ),
-                      //                               'description' => __( 'Set Options for homepage callouts.')
-                      //                               ),
-                      // 'home_page_standards' => array(
-                      //                                'name' => 'home_page_standards',
-                      //                                'title' => __( 'Home Page Additional Services' ),
-                      //                                'description' => __( 'Set services to be displayed on "Why Choose AASI".')
-                      //                                ),
+                      'front_page_section1' => array(
+                                                  'name' => 'front_page_section1',
+                                                  'title' => __( 'Intro Section' ),
+                                                  //'description' => __( 'Intro Section.')
+                                                  ),
+                      'front_page_section2' => array(
+                                                  'name' => 'front_page_section2',
+                                                  'title' => __( 'Get A Quote Section' ),
+                                                  //'description' => __( 'Get A Quote Section.')
+                                                  ),
+                      'front_page_section3' => array(
+                                                  'name' => 'front_page_section3',
+                                                  'title' => __( 'Services Section' ),
+                                                  //'description' => __( 'Services Section.')
+                                                  ),
+                      'front_page_section4' => array(
+                                                  'name' => 'front_page_section4',
+                                                  'title' => __( 'Awards Section' ),
+                                                  //'description' => __( 'Set Front Page Content.')
+                                                  ),
+                      'front_page_section5' => array(
+                                                  'name' => 'front_page_section5',
+                                                  'title' => __( 'Project Gallery Section' ),
+                                                  //'description' => __( 'Project Gallery Section.')
+                                                  ),
                       'business_information' => array(
                                                       'name' => 'business_information',
                                                       'title' => __( 'Business Information' ),
@@ -44,33 +54,150 @@ $mainoptions = array(
                       "id" => "site_logo",
                       "type" => "image"
                     ),
-  "home_page_slider_image1" => array(
-                                    "tab" => "main_options",
-                                    "name" => "home_page_slider_image1",
-                                    "title" => "Slider Image 1",
-                                    "description" => __( "Upload logo to be used in header", "example" ),
-                                    "section" => "home_page_slider",
-                                    "id" => "slider_image_1",
-                                    "type" => "image"
-                                  ),
-  "home_page_slider_image2" => array(
-                                    "tab" => "main_options",
-                                    "name" => "home_page_slider_image2",
-                                    "title" => "Slider Image 2",
-                                    "description" => __( "Upload logo to be used in header", "example" ),
-                                    "section" => "home_page_slider",
-                                    "id" => "slider_image_2",
-                                    "type" => "image"
-                                  ),
-  "home_page_slider_image3" => array(
-                                    "tab" => "main_options",
-                                    "name" => "home_page_slider_image3",
-                                    "title" => "Slider Image 3",
-                                    "description" => __( "Upload logo to be used in header", "example" ),
-                                    "section" => "home_page_slider",
-                                    "id" => "slider_image_3",
-                                    "type" => "image"
-                                  ),
+  "tagline" => array(
+                     "tab" => "main_options",
+                     "name" => "tagline",
+                     "title" => "Tag Line",
+                     "description" => __( "Enter the company's tagline" ),
+                     "section" => "header",
+                     "id" => "tagline",
+                     "type" => "text"
+                     ),
+  "phone_number" => array(
+                     "tab" => "main_options",
+                     "name" => "phone_number",
+                     "title" => "Phone Number",
+                     "description" => __( "Enter the company's phone number" ),
+                     "section" => "header",
+                     "id" => "phone_number",
+                     "type" => "text"
+                     ),
+  "section1_title" => array(
+                                        "tab" => "main_options",
+                                        "name" => "section1_title",
+                                        "title" => "Title",
+                                        //"description" => __( "Enter text." ),
+                                        "section" => "front_page_section1",
+                                        "id" => "section1_title",
+                                        "type" => "text"
+                                        ),
+  "section1_subtitle" => array(
+                                        "tab" => "main_options",
+                                        "name" => "section1_subtitle",
+                                        "title" => "Sub title",
+                                        //"description" => __( "Enter text." ),
+                                        "section" => "front_page_section1",
+                                        "id" => "section1_subtitle",
+                                        "type" => "text"
+                                        ),
+  "section1_image" => array(
+                                        "tab" => "main_options",
+                                        "name" => "section1_image",
+                                        "title" => "Image",
+                                        //"description" => __( "Enter text." ),
+                                        "section" => "front_page_section1",
+                                        "id" => "section1_image",
+                                        "type" => "image"
+                                        ),
+  "section1_content" => array(
+                                        "tab" => "main_options",
+                                        "name" => "section1_content",
+                                        "title" => "Content",
+                                        //"description" => __( "Enter text." ),
+                                        "section" => "front_page_section1",
+                                        "id" => "section1_content",
+                                        "type" => "textarea"
+                                        ),
+  "section1_pdf" => array(
+                                        "tab" => "main_options",
+                                        "name" => "section1_pdf",
+                                        "title" => "PDF",
+                                        "description" => __( "Enter the pdf link." ),
+                                        "section" => "front_page_section1",
+                                        "id" => "section1_pdf",
+                                        "type" => "text"
+                                        ),
+  "section2_title" => array(
+                                        "tab" => "main_options",
+                                        "name" => "section2_title",
+                                        "title" => "Title",
+                                        //"description" => __( "Enter text." ),
+                                        "section" => "front_page_section2",
+                                        "id" => "section2_title",
+                                        "type" => "text"
+                                        ),
+  "section2_subtitle" => array(
+                                        "tab" => "main_options",
+                                        "name" => "section2_subtitle",
+                                        "title" => "Sub title",
+                                        //"description" => __( "Enter text." ),
+                                        "section" => "front_page_section2",
+                                        "id" => "section2_subtitle",
+                                        "type" => "text"
+                                        ),
+   "section3_title" => array(
+                                        "tab" => "main_options",
+                                        "name" => "section3_title",
+                                        "title" => "Title",
+                                        //"description" => __( "Enter text." ),
+                                        "section" => "front_page_section3",
+                                        "id" => "section3_title",
+                                        "type" => "text"
+                                        ),
+  "section3_subtitle" => array(
+                                        "tab" => "main_options",
+                                        "name" => "section3_subtitle",
+                                        "title" => "Sub title",
+                                        //"description" => __( "Enter text." ),
+                                        "section" => "front_page_section3",
+                                        "id" => "section3_subtitle",
+                                        "type" => "text"
+                                        ),
+  "section4_title" => array(
+                                        "tab" => "main_options",
+                                        "name" => "section4_title",
+                                        "title" => "Title",
+                                        //"description" => __( "Enter text." ),
+                                        "section" => "front_page_section4",
+                                        "id" => "section4_title",
+                                        "type" => "text"
+                                        ),
+  "section4_subtitle" => array(
+                                        "tab" => "main_options",
+                                        "name" => "section4_subtitle",
+                                        "title" => "Sub title",
+                                        //"description" => __( "Enter text." ),
+                                        "section" => "front_page_section4",
+                                        "id" => "section4_subtitle",
+                                        "type" => "text"
+                                        ),
+  "section4_image" => array(
+                                        "tab" => "main_options",
+                                        "name" => "section4_image",
+                                        "title" => "Parallax Image",
+                                        //"description" => __( "Enter text." ),
+                                        "section" => "front_page_section4",
+                                        "id" => "section4_image",
+                                        "type" => "image"
+                                        ),
+  "section5_title" => array(
+                                        "tab" => "main_options",
+                                        "name" => "section5_title",
+                                        "title" => "Title",
+                                        //"description" => __( "Enter text." ),
+                                        "section" => "front_page_section5",
+                                        "id" => "section5_title",
+                                        "type" => "text"
+                                        ),
+  "section5_subtitle" => array(
+                                        "tab" => "main_options",
+                                        "name" => "section5_subtitle",
+                                        "title" => "Sub title",
+                                        //"description" => __( "Enter text." ),
+                                        "section" => "front_page_section5",
+                                        "id" => "section5_subtitle",
+                                        "type" => "text"
+                                        ),
   "facebook" => array(
                      "tab" => "main_options",
                      "name" => "facebook",

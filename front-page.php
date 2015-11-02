@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php global $up_options; ?>
 
 <section class="slider">
   <div class="banner">
@@ -9,16 +10,17 @@
 <section class="intro">
   <div class="container">
     <div class="row">
-      <div class="col-md-6 col-xs-12 wow fadeInUp"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/workers.png" alt="Image" class="left-image"> </div>
+      <div class="col-md-6 col-xs-12 wow fadeInUp"> 
+        <?php if ($up_options->section1_image != ''): echo "<img src='".$up_options->section1_image."' alt='Image' class='left-image'>"; 
+        else: echo "<img src='".get_template_directory_uri()."/assets/images/workers.png' alt='Image' class='left-image'>"; endif; ?>
+      </div>
       <div class="col-md-6 col-xs-12 wow fadeInRight">
         <div class="title-box">
-          <h5>Develops quality projects to cater for workplace and office</h5>
-          <h2>GET OFFER</h2>
-          <span></span> </div>
-          <p>Cappella Homes is a professional residential builder specializing in custom built homes. Whether your dream is to make the home you live in live up to its full potential with our remodeling services, or if you desire to design and build a new, custom home, we are here to help.</p>
-          <p>We approach each project as an opportunity to give you the best possible home building experience. Whether you have house plans in hand, are interested in our design/build program or choose to select from our extensive portfolio of new home plans, we submit accurate proposals for each job without throwing around per-square-foot pricing.</p>
-         <!--  <p>At Cappella Homes, we are always glad to guide our clients through every step of the building or room remodeling process. Our ultimate goal is to make your building experience a pleasant and memorable one that matches the quality of the custom homes we build for you. We strive to have customers say Cappella Homes is among the best Jacksonville home builders.</p> -->
-        <div class="file-box"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-file.png" alt="Image"> <a href="#">DOWNLOAD PDF CATALOG</a></div>
+          <?php if ($up_options->section1_subtitle != ''): echo "<h5>".$up_options->section1_subtitle."</h5>"; endif; ?>
+          <?php if ($up_options->section1_title != ''): echo "<h2>".$up_options->section1_title."</h2><span></span>"; endif; ?>
+        </div>
+        <p><?php echo $up_options->section1_content ?></p>
+        <div class="file-box"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-file.png" alt="Image"> <a target="_blank" href="<?php echo $up_options->section1_pdf ?>">DOWNLOAD PDF CATALOG</a></div>
       </div>
     </div>
   </div>
@@ -28,8 +30,8 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <h4>We contribute to the society with the ones we protect</h4>
-        <h3>Develop and recreate as well as the ones we provide for our customers</h3>
+        <?php if ($up_options->section2_subtitle != ''): echo "<h4>".$up_options->section2_subtitle."</h4>"; endif; ?>
+        <?php if ($up_options->section2_title != ''): echo "<h3>".$up_options->section2_title."</h3>"; endif; ?>
         <a href="/contact" class="site-btn">GET A QUOTE <i class="ion-chevron-right"></i></a> </div>
     </div>
   </div>
@@ -40,24 +42,26 @@
     <div class="row">
       <div class="col-xs-12 text-center">
         <div class="title-box">
-          <h5>Don’t be an architecture of building, be the architecture of life.</h5>
-          <h2>WHAT WE DO</h2>
-          <span></span> </div>
+          <?php if ($up_options->section1_subtitle != ''): echo "<h5>".$up_options->section3_subtitle."</h5>"; endif; ?>
+          <?php if ($up_options->section1_title != ''): echo "<h2>".$up_options->section3_title."</h2><span></span>"; endif; ?>
+        </div>
       </div>
       <div class="col-xs-12">
         <div class="carousel">
-          <div class="item">
-            <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/images/homes.png" alt="Image"> </figure>
-            <span class="description">Develop and recreate as well as the ones we provide</span> <a href="/homes-communities">HOMES & COMMUNITIES</a> <span class="border"></span> 
-          </div>
-          <div class="item">
-            <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/images/renovations.png" alt="Image"> </figure>
-            <span class="description">Develop and recreate as well as the ones we provide</span> <a href="/renovation-remodeling">RENOVATION</a> <span class="border"></span> 
-          </div>
-          <div class="item">
-            <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/images/additions.png" alt="Image"> </figure>
-            <span class="description">Develop and recreate as well as the ones we provide</span> <a href="/room-additions">ROOM ADDITIONS</a> <span class="border"></span> 
-          </div>
+          <?php
+            //production
+            $args = array( 'post_type' =>'page', 'post_parent' => '20', 'orderby' => 'menu_order', 'order'=> 'ASC', 'posts_per_page'=> '6');
+   
+            //test site
+            //$args = array( 'post_type' =>'page', 'post_parent' => '38', 'orderby' => 'menu_order', 'order'=> 'ASC', 'posts_per_page'=> '6');
+            $query = new WP_Query($args);
+            if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); 
+          ?>
+            <div class="item">
+              <figure><?php echo get_the_post_thumbnail( $the_post->ID, 'large' ); ?></figure>
+              <span class="description"><?php if (get_field('sub_title')): the_field('sub_title'); endif; ?></span> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> <span class="border"></span> 
+            </div>
+          <?php endwhile; endif; ?>
         </div>
       </div>
     </div>
@@ -65,14 +69,14 @@
 </section>
 
 <section class="video-bg wow fadeInUp">
-  <video src="<?php echo get_template_directory_uri(); ?>/assets/videos/video.mp4" class="hidden-sm hidden-xs" loop muted autoplay data-stellar-ratio="0.5"></video>
+  <?php if ($up_options->section4_image != ''): echo "<img src='".$up_options->section4_image."' class='hidden-sm hidden-xs' data-stellar-ratio='0.5'>"; endif; ?>
   <div class="video-overlay"></div>
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <h5>35% OF MORTGAGE INTEREST SUPPORT FROM CONSTRUCTION</h5>
-        <h2>URBAN DESIGN AWARD</h2>
-        <i class="ion-trophy icon"></i><br>
+        <?php if ($up_options->section4_subtitle != ''): echo "<h5>".$up_options->section4_subtitle."</h5>"; endif; ?>
+        <?php if ($up_options->section4_title != ''): echo "<h2>".$up_options->section4_title.""; endif; ?>
+        <br><i class="ion-trophy icon"></i><br>
         <a href="#" class="site-btn">SEE ALL AWARDS <i class="ion-chevron-right"></i></a> </div>
     </div>
   </div>
@@ -83,18 +87,25 @@
     <div class="row">
       <div class="col-xs-12">
         <div class="title-box">
-          <h5>Construction premium lifespace & workspaces</h5>
-          <h2>OUR PROJECTS</h2>
-          <span></span> </div>
+          <?php if ($up_options->section5_subtitle != ''): echo "<h5>".$up_options->section5_subtitle."</h5>"; endif; ?>
+          <?php if ($up_options->section5_title != ''): echo "<h2>".$up_options->section5_title."</h2><span></span>"; endif; ?>
+        </div>
         <ul class="filter">
-          <li><a href="#" data-filter=".baroody">Baroody Residence</a></li>
+          <!-- <li><a href="#" data-filter=".baroody">Baroody Residence</a></li>
           <li><a href="#" data-filter=".lee">Lee Residence</a></li>
           <li><a href="#" data-filter=".maxwell">Maxwell Residence</a></li>
           <li><a href="#" data-filter=".twin-lakes">Twin Lakes Lot 74</a></li>
           <li><a href="#" data-filter=".riverside">Riverside Residence</a></li>
           <li><a href="#" data-filter=".burstadt">Burstadt Residence</a></li>
           <li><a href="#" data-filter=".cook">Cook Residence</a></li>
-          <li><a href="#" data-filter=".perry">Perry Residence</a></li>
+          <li><a href="#" data-filter=".perry">Perry Residence</a></li> -->
+          <?php 
+            $args2 = array( 'post_type' => array('gallery'));
+            $query2 = new WP_Query($args2);
+            if ( $query2->have_posts() ) : while ( $query2->have_posts() ) : $query2->the_post(); 
+          ?>
+            <li><a href="#" data-filter=".lee"><?php echo the_title(); ?></a></li>
+          <?php endwhile; endif; ?>
         </ul>
       </div>
     </div>

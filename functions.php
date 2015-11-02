@@ -26,6 +26,7 @@ function conure_setup()
 	add_action( 'login_enqueue_scripts', 'custom_login_logo' );
 	add_filter( 'login_headerurl', 'my_login_logo_url' );
 	add_action( 'wp_before_admin_bar_render', 'remove_wp_logo' );
+	add_action('init', 'cptui_register_my_cpt_gallery');
 	#add_action( 'admin_init', 'my_remove_menu_pages' );
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-thumbnails' );
@@ -159,4 +160,40 @@ function admin_scripts_styles(){
 	wp_register_script( 'custom_wp_admin_js', get_template_directory_uri() . '/admin-script.js', false, '1.0.0' );
 	wp_enqueue_script( 'custom_wp_admin_js' );
 
+}
+
+//custom post type
+function cptui_register_my_cpt_gallery() {
+	register_post_type('gallery', array(
+		'label' => 'Galleries',
+		'description' => '',
+		'public' => true,
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'capability_type' => 'post',
+		'map_meta_cap' => true,
+		'hierarchical' => false,
+		'rewrite' => array('slug' => 'gallery', 'with_front' => true),
+		'query_var' => true,
+		'exclude_from_search' => true,
+		'menu_icon' => 'dashicons-forms',
+		'supports' => array('title'),
+		'taxonomies' => array('post_tag'),
+		'labels' => array (
+			'name' => 'Galleries',
+			'singular_name' => 'Gallery',
+			'menu_name' => 'Galleries',
+			'add_new' => 'Add Gallery',
+			'add_new_item' => 'Add New Gallery',
+			'edit' => 'Edit',
+			'edit_item' => 'Edit Gallery',
+			'new_item' => 'New Gallery',
+			'view' => 'View Gallery',
+			'view_item' => 'View Gallery',
+			'search_items' => 'Search Galleries',
+			'not_found' => 'No Galleries Found',
+			'not_found_in_trash' => 'No Galleries Found in Trash',
+			'parent' => 'Parent Gallery',
+			)
+		) );
 }

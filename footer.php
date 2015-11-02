@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-xs-12">
-        <h4>Making Your Dream Home A Reality.</h4>
+        <h4><?php global $up_options; echo $up_options->tagline ?></h4>
       </div>
       <div class="col-md-4 col-xs-12">
         <h4>Follow us on social media</h4>

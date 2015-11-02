@@ -9,6 +9,7 @@
   <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> 
 
 	<?php wp_head(); ?>
+  <?php global $up_options; ?>
 </head>
 
 <div class="loading">
@@ -35,8 +36,8 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
-            <h5>Making Your Dream Home A Reality</h5>
-            <span class="phone"><i class="ion-android-call"></i> 1-904-276-1145</span> <a href="#" class="map"><i class="ion-ios-location"></i> SEE ON MAPS</a></div>
+            <?php if ($up_options->tagline != ''): echo "<h5>".$up_options->tagline."</h5>"; endif; ?>
+            <span class="phone"><?php if ($up_options->phone_number != ''): echo "<i class='ion-android-call'></i> ".$up_options->phone_number; endif; ?></span> <a href="#" class="map"><i class="ion-ios-location"></i> SEE ON MAPS</a></div>
         </div>
       </div>
     </div>

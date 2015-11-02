@@ -39,6 +39,11 @@ button[type="button"] {background-image:none !important;}
 
 .intro .title-box {margin-top: 0px !important;}
 
+.home-services figure img {height:110%;}
+
+.video-bg img {    width: 100%; float: left; position: absolute; left: 0; top: 0;}
+.video-bg .icon {margin-top:30px;}
+
 .home-gallery ul.gallery li figure img {height:210px;}
 .home-gallery ul.gallery {min-height:424px;}
 .home-gallery ul.filter li a {display:block; margin-bottom:5px;}

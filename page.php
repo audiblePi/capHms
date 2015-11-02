@@ -1,6 +1,7 @@
-<?php get_header(); 
+<?php get_header(); ?>
+<script>
 
-?>
+</script>
 <section class="page-title">
   <div class="inner">
   	<div class="container">
@@ -10,7 +11,7 @@
             </div>
             <div class="col-md-3 hidden-xs">
             	<ol class="breadcrumb">
-                  <li><a href="#">Home</a></li>
+                  <li><a href="<?php echo site_url(); ?>">Home</a></li>
                   <li class="active"><?php the_title(); ?></li>
                 </ol>
             </div>
