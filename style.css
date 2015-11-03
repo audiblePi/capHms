@@ -25,6 +25,8 @@ p{color:#000;line-height:1.375;margin-bottom:20px}
 /*New Color #892212*/
 
 /*Custom Styles*/
+.transition-overlay {position:relative !important;}
+
 .site-btn {background-image: none !important;color: #fff !important;}
 button[type="button"] {background-image:none !important;}
 
