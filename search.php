@@ -4,7 +4,7 @@
   	<div class="container">
     	<div class="row">
         	<div class="col-md-9 col-xs-12">
-            	<h4 >Search Results for: &quot;<?php echo get_search_query(); ?>&quot;</h4>
+            	<h4>Search Results for: &quot;<?php echo get_search_query(); ?>&quot;</h4>
             </div>
             <div class="col-md-3 hidden-xs">
             	<ol class="breadcrumb">

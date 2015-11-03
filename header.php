@@ -7,7 +7,7 @@
 	<title><?php wp_title( ' | ', true, 'right' ); ?></title>
 	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
   <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> 
-
+  <link href='https://fonts.googleapis.com/css?family=Cardo:400italic' rel='stylesheet' type='text/css'>
 	<?php wp_head(); ?>
   <?php global $up_options; $background = $up_options->background; ?>
 </head>

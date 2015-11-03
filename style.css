@@ -41,11 +41,15 @@ button[type="button"] {background-image:none !important;}
 .intro .title-box {margin-top: 0px !important;}
 .title-box h5 {margin-top:0px;}
 
+.quote-bar h4 {display:block !important;}
+.quote-bar h3 {display:block  !important;}
+body .quote-bar a {margin-top:-50px;}
+
 .home-services figure img {height:110%;}
 
 .video-bg {background-size:cover;}
 .video-bg img { width: 100%; float: left; position: absolute; left: 0; top: 0;}
-.video-bg h2 {}
+.video-bg h2 {font-family: 'Cardo', serif;}
 .video-bg p {color:#fff;}
 .video-bg .icon {margin-top:30px;}
 
