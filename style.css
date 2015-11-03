@@ -113,6 +113,8 @@ span.wpcf7-list-item {display:block; margin-left:1.5em !important;}
 	.intro .title-box {margin-top:30px !important;}
 	.home-gallery ul.gallery {min-height: 345px;}
 	.home-gallery ul.gallery li figure img {height:170px;}
+
+	.breadcrumb {display:none;}
 	footer .col-md-4 {margin-bottom: 40px;}
 }
 

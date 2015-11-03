@@ -1,7 +1,5 @@
 <?php get_header(); ?>
-<script>
 
-</script>
 <section class="page-title">
   <div class="inner">
   	<div class="container">
