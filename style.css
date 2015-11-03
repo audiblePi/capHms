@@ -7,6 +7,14 @@ License URI:https://www.gnu.org/licenses/gpl.html
 Tags:black, blue, white, light, one-column, fluid-layout, responsive-layout, custom-menu, featured-images, microformats, sticky-post, threaded-comments
 Text Domain:conure
 NinJawP is distributed under the terms of the GNU GPL */
+@import url(https://fonts.googleapis.com/css?family=Cardo:400italic);
+@font-face {
+	font-family: 'Cardo';
+	src: url('/wp-content/themes/cappellaHomes/assets/fonts/Cardo/Cardo-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
 a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
 body{line-height:1}
@@ -49,7 +57,7 @@ body .quote-bar a {margin-top:-50px;}
 
 .video-bg {background-size:cover;}
 .video-bg img { width: 100%; float: left; position: absolute; left: 0; top: 0;}
-.video-bg h2 {font-family: 'Cardo', serif;}
+.video-bg h2 {font-family: 'Cardo', serif !important;}
 .video-bg p {color:#fff;}
 .video-bg .icon {margin-top:30px;}
 
