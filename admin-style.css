@@ -3,6 +3,10 @@
 .appearance_page_upfw-settings h3 { cursor: pointer; }
 
 .appearance_page_upfw-settings .form-table.visible { display: block; }
+.appearance_page_upfw-settings form p {padding-left:15px;}
+.appearance_page_upfw-settings .form-table th {width:120px;padding-left: 15px;}
+.appearance_page_upfw-settings .form-table td {width:85%;}
+.appearance_page_upfw-settings input[type=text], .appearance_page_upfw-settings textarea{width:100%;}
 
 .toggle-button { display: inline-block; -webkit-transform: rotate(0deg); transition: all .5s; }
 .toggle-button.visible { -webkit-transform: rotate(90deg); }

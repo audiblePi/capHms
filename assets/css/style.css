@@ -596,6 +596,8 @@ footer .sub-footer .themezinho i{ color:#892212;}
 
 
 /* RESPONSIVE FIXES */
+
+
 @media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
 input[type="text"]{ border-radius:0;}
 button[type="submit"]{ border-radius:0;}

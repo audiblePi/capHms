@@ -9,8 +9,15 @@
   <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> 
 
 	<?php wp_head(); ?>
-  <?php global $up_options; ?>
+  <?php global $up_options; $background = $up_options->background; ?>
 </head>
+<script>
+  jQuery(function($){
+    var background = "<?php echo $background; ?>";
+    if (background != '')
+      $('.navbar-default').css('background-image', 'url(' + background + ')');
+  });
+</script>
 
 <div class="loading">
   <div class="table">

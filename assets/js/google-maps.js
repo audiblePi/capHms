@@ -2,12 +2,10 @@
 	var markers = [
     	{
        		"lat": '30.129792',
-           "lng": '-81.773839',
-		  
+           	"lng": '-81.773839',
 			"description": '<a href="http://www.cappellahomes.com" style="color:#ef3c3c; font-weight:800;">Cappella Homes, Inc.</a>'
         }
 	];
-	
 	
 	// Google maps main api
 	window.onload = function () {
@@ -33,7 +31,7 @@
 			var marker = new google.maps.Marker({
            	position: myLatlng,
            	map: map,
-        	icon: '/wp-content/themes/cappellaHomes/assets/images/map-pin.png',
+        	icon: '/wp-content/themes/cappellaHomes/assets/images/logo-map-pin.png',
            	title: data.title
            	});
 			(function (marker, data) {

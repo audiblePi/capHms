@@ -1,6 +1,12 @@
 <?php get_header(); ?>
-<?php global $up_options; ?>
-
+<?php global $up_options; $parallax_image=$up_options->section4_image;?>
+<script>
+  jQuery(function($){
+    var parallax_image = "<?php echo $parallax_image; ?>";
+    if (parallax_image != '')
+      $('.video-bg').css('background-image', 'url(' + parallax_image + ')');
+  });
+</script>
 <section class="slider">
   <div class="banner">
   	<?php putRevSlider("Front Page Slider") ?>
@@ -49,11 +55,8 @@
       <div class="col-xs-12">
         <div class="carousel">
           <?php
-            //production
-            $args = array( 'post_type' =>'page', 'post_parent' => '20', 'orderby' => 'menu_order', 'order'=> 'ASC', 'posts_per_page'=> '6');
-   
-            //test site
-            //$args = array( 'post_type' =>'page', 'post_parent' => '38', 'orderby' => 'menu_order', 'order'=> 'ASC', 'posts_per_page'=> '6');
+            $args = array( 'post_type' =>'page', 'post_parent' => '20', 'orderby' => 'menu_order', 'order'=> 'ASC', 'posts_per_page'=> '6'); //production
+            //$args = array( 'post_type' =>'page', 'post_parent' => '38', 'orderby' => 'menu_order', 'order'=> 'ASC', 'posts_per_page'=> '6');  //test site
             $query = new WP_Query($args);
             if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); 
           ?>
@@ -74,10 +77,12 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <?php if ($up_options->section4_subtitle != ''): echo "<h5>".$up_options->section4_subtitle."</h5>"; endif; ?>
-        <?php if ($up_options->section4_title != ''): echo "<h2>".$up_options->section4_title.""; endif; ?>
-        <br><i class="ion-trophy icon"></i><br>
-        <a href="#" class="site-btn">SEE ALL AWARDS <i class="ion-chevron-right"></i></a> </div>
+        <div class="title-box">
+          <?php if ($up_options->section4_subtitle != ''): echo "<h5>".$up_options->section4_subtitle."</h5>"; endif; ?>
+          <?php if ($up_options->section4_title != ''): echo "<h2>".$up_options->section4_title."</h2><span></span>"; endif; ?>
+        </div>
+        <?php if ($up_options->section4_content != ''): echo "<p>".$up_options->section4_content."</p>"; endif; ?>
+      </div>
     </div>
   </div>
 </section>
@@ -91,80 +96,34 @@
           <?php if ($up_options->section5_title != ''): echo "<h2>".$up_options->section5_title."</h2><span></span>"; endif; ?>
         </div>
         <ul class="filter">
-          <!-- <li><a href="#" data-filter=".baroody">Baroody Residence</a></li>
-          <li><a href="#" data-filter=".lee">Lee Residence</a></li>
-          <li><a href="#" data-filter=".maxwell">Maxwell Residence</a></li>
-          <li><a href="#" data-filter=".twin-lakes">Twin Lakes Lot 74</a></li>
-          <li><a href="#" data-filter=".riverside">Riverside Residence</a></li>
-          <li><a href="#" data-filter=".burstadt">Burstadt Residence</a></li>
-          <li><a href="#" data-filter=".cook">Cook Residence</a></li>
-          <li><a href="#" data-filter=".perry">Perry Residence</a></li> -->
           <?php 
-            $args2 = array( 'post_type' => array('gallery'));
-            $query2 = new WP_Query($args2);
-            if ( $query2->have_posts() ) : while ( $query2->have_posts() ) : $query2->the_post(); 
+            $args = array( 'post_type' => array('gallery'), 'orderby' => 'title', 'order' => 'ASC');
+            $query = new WP_Query($args);
+            if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post();
+              echo '<li><a href="#" data-filter=".'.$post->post_name.'">'.get_the_title().'</a></li>';
+            endwhile; endif; wp_reset_postdata();
           ?>
-            <li><a href="#" data-filter=".lee"><?php echo the_title(); ?></a></li>
-          <?php endwhile; endif; ?>
         </ul>
       </div>
     </div>
   </div>
   <ul class="gallery thumbs">
-    <li class="baroody"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/B-001.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/B-001.jpg" alt="Image"></a></figure> </li>
-    <li class="baroody"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/B-002.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/B-002.jpg" alt="Image"></a></figure> </li>
-    <li class="baroody"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/B-003.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/B-003.jpg" alt="Image"></a></figure> </li>
-    <li class="baroody"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/B-004.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/B-004.jpg" alt="Image"></a></figure> </li>
-    <li class="baroody"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/B-005.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/B-005.jpg" alt="Image"></a></figure> </li>
-    <li class="baroody"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/B-006.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/B-006.jpg" alt="Image"></a></figure> </li>
-    <li class="baroody"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/B-007.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/B-007.jpg" alt="Image"></a></figure> </li>
-    <li class="baroody"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/B-008.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/B-008.jpg" alt="Image"></a></figure> </li>
-    
-    <li class="lee"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/L-001.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/L-001.jpg" alt="Image"></a></figure> </li>
-    <li class="lee"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/L-002.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/L-002.jpg" alt="Image"></a></figure> </li>
-    <li class="lee"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/L-003.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/L-003.jpg" alt="Image"></a></figure> </li>
-   
-    <li class="maxwell"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/M-001.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/M-001.jpg" alt="Image"></a></figure> </li>
-    <li class="maxwell"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/M-002.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/M-002.jpg" alt="Image"></a></figure> </li>
-    <li class="maxwell"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/M-003.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/M-003.jpg" alt="Image"></a></figure> </li>
-    <li class="maxwell"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/M-004.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/M-004.jpg" alt="Image"></a></figure> </li>
-    <li class="maxwell"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/M-005.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/M-005.jpg" alt="Image"></a></figure> </li>
-    <li class="maxwell"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/M-006.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/M-006.jpg" alt="Image"></a></figure> </li>
-    <li class="maxwell"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/M-007.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/M-007.jpg" alt="Image"></a></figure> </li>
-    
-    <li class="twin-lakes"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/T-001.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/T-001.jpg" alt="Image"></a></figure> </li>
-    <li class="twin-lakes"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/T-002.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/T-002.jpg" alt="Image"></a></figure> </li>
-    <li class="twin-lakes"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/T-003.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/T-003.jpg" alt="Image"></a></figure> </li>
-   
-    <li class="riverside"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/H-001.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/H-001.jpg" alt="Image"></a></figure> </li>
-    <li class="riverside"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/H-002.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/H-002.jpg" alt="Image"></a></figure> </li>
-    <li class="riverside"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/H-003.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/H-003.jpg" alt="Image"></a></figure> </li>
-    <li class="riverside"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/H-004.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/H-004.jpg" alt="Image"></a></figure> </li>
-    <li class="riverside"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/H-005.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/H-005.jpg" alt="Image"></a></figure> </li>
-    <li class="riverside"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/H-006.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/H-006.jpg" alt="Image"></a></figure> </li>
-    <li class="riverside"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/H-007.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/H-007.jpg" alt="Image"></a></figure> </li>
-    <li class="riverside"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/H-007-Before.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/H-007-Before.jpg" alt="Image"></a></figure> </li>
-    
-    <li class="burstadt"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/bu-01.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/bu-01.jpg" alt="Image"></a></figure> </li>
-    <li class="burstadt"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/bu-03.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/bu-03.jpg" alt="Image"></a></figure> </li>
-    <li class="burstadt"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/bu-04.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/bu-04.jpg" alt="Image"></a></figure> </li>
-    <li class="burstadt"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/bu-05.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/bu-05.jpg" alt="Image"></a></figure> </li>
-    <li class="burstadt"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/bu-06.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/bu-06.jpg" alt="Image"></a></figure> </li>
-    
-    <li class="cook"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/c-001.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/c-001.jpg" alt="Image"></a></figure> </li>
-    <li class="cook"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/c-002.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/c-002.jpg" alt="Image"></a></figure> </li>
-    <li class="cook"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/c-003.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/c-003.jpg" alt="Image"></a></figure> </li>
-    <li class="cook"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/c-004.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/c-004.jpg" alt="Image"></a></figure> </li>
-    <li class="cook"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/c-005.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/c-005.jpg" alt="Image"></a></figure> </li>
-    
-    <li class="perry"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/P-001.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/P-001.jpg" alt="Image"></a></figure> </li>
-    <li class="perry"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/P-002.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/P-002.jpg" alt="Image"></a></figure> </li>
-    <li class="perry"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/P-003.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/P-003.jpg" alt="Image"></a></figure> </li>
-    <li class="perry"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/P-004.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/P-004.jpg" alt="Image"></a></figure> </li>
-    <li class="perry"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/P-005.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/P-005.jpg" alt="Image"></a></figure> </li>
-    <li class="perry"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/P-006.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/P-006.jpg" alt="Image"></a></figure> </li>
-    <li class="perry"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/P-007.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/P-007.jpg" alt="Image"></a></figure> </li>
-    <li class="perry"> <figure><a href="<?php echo get_template_directory_uri(); ?>/assets/images/P-008.jpg" class="litebox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/P-008.jpg" alt="Image"></a></figure> </li>
+     <?php 
+      $args2 = array( 'post_type' => array('gallery'));
+      $query2 = new WP_Query($args2);
+      if ( $query2->have_posts() ): 
+        while ( $query2->have_posts() ):
+          $query2->the_post(); 
+          for ($x = 1; $x <= 10; $x++) {
+            $slug = "gallery_image_".$x;
+            if (get_field($slug)):
+              echo '<li class="'.$post->post_name.'"><figure><a href="'.get_field($slug).'"" class="litebox"><img src="'.get_field($slug).'" alt="Image"></a></figure></li>';
+            endif;
+          }
+        endwhile;
+      endif;
+      wp_reset_postdata();
+    ?>
   </ul>
 </section>
 <?php get_footer(); ?>

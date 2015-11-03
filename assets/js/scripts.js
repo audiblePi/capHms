@@ -83,28 +83,15 @@
 		// Isotope works filter
 		var $container = $('.home-gallery ul.gallery');
 		$container.isotope({
-			filter: '.baroody',
+			filter: ':nth-child(-n+8)',
 			layoutMode: 'fitRows'
-			// animationOptions: {
-			// 	duration: 750,
-			// 	// easing: 'linear',
-			// 	//queue: false
-			// }
 		});
 
 		$('.filter li a').click(function(){
-			// $('.filter li a .current').removeClass('current');
-			// $(this).addClass('current');
-		 
 			var selector = $(this).attr('data-filter');
 			$container.isotope({
 				filter: selector,
 				layoutMode: 'fitRows'
-				// animationOptions: {
-				// 	duration: 750,
-				// 	//easing: 'linear',
-				// 	//queue: false
-				// }
 			});
 			return false;
 		}); 
@@ -113,7 +100,9 @@
 	// Wow animations
 	wow = new WOW({
 		animateClass: 'animated',
-		offset:       150
+		offset:       150,
+		mobile:       false,       
+      	live:         true   
 	});
 	wow.init();
 })(jQuery);

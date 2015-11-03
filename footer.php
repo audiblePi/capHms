@@ -1,8 +1,13 @@
+<?php 
+  global $up_options; 
+  $background = $up_options->background;
+  $tagline = $up_options->tagline;
+?>
 <section class="footer-bar wow fadeIn">
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-xs-12">
-        <h4><?php global $up_options; echo $up_options->tagline ?></h4>
+        <?php if ($tagline != ''): echo "<h4>".$tagline."</h4>"; endif; ?>
       </div>
       <div class="col-md-4 col-xs-12">
         <h4>Follow us on social media</h4>
@@ -38,6 +43,9 @@
     $(".loading .table .inner").addClass("fade");
     $('.loading').delay(2000).addClass("slide-up"); 
   });
+  var background = "<?php echo $background; ?>";
+  if (background != '')
+    $('footer').css('background-image', 'url(' + background + ')');
 })(jQuery)
 </script> 
 <?php wp_footer(); ?>
